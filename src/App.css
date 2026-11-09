@@ -1,0 +1,435 @@
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Cabecalho */
+.header {
+  background-color: #1e293b;
+  border-bottom: 1px solid #334155;
+  padding: 16px 20px;
+}
+
+.header-container {
+  max-width: 1050px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo-icone {
+  font-size: 1.8rem;
+}
+
+.logo h1 {
+  font-size: 1.3rem;
+  color: #ffffff;
+  line-height: 1.1;
+}
+
+.logo p {
+  font-size: 0.8rem;
+  color: #94a3b8;
+}
+
+.badge-projeto {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #f97316;
+  background-color: rgba(249, 115, 22, 0.12);
+  border: 1px solid rgba(249, 115, 22, 0.3);
+  padding: 4px 10px;
+  border-radius: 12px;
+}
+
+/* Container do conteudo principal */
+.container {
+  max-width: 1050px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 24px 20px 48px;
+  flex: 1;
+}
+
+/* Painel de detalhes do jogador selecionado */
+.painel-destaque {
+  margin-bottom: 28px;
+}
+
+.destaque-box {
+  display: flex;
+  gap: 20px;
+  background-color: #1e293b;
+  border: 1px solid #475569;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.destaque-foto {
+  width: 150px;
+  height: 170px;
+  object-fit: cover;
+  border-radius: 6px;
+  flex-shrink: 0;
+}
+
+.destaque-info {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.destaque-topo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 4px;
+}
+
+.destaque-tag {
+  color: #f97316;
+  font-weight: 700;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+}
+
+.destaque-numero {
+  background-color: #f97316;
+  color: #ffffff;
+  font-size: 0.85rem;
+  font-weight: bold;
+  padding: 2px 8px;
+  border-radius: 4px;
+}
+
+.destaque-info h2 {
+  font-size: 1.5rem;
+  color: #ffffff;
+  margin: 2px 0 4px;
+}
+
+.destaque-posicao {
+  font-size: 0.85rem;
+  color: #94a3b8;
+  margin-bottom: 8px;
+}
+
+.destaque-descricao {
+  font-size: 0.92rem;
+  color: #cbd5e1;
+  line-height: 1.5;
+  margin-bottom: 12px;
+}
+
+.destaque-pontos {
+  font-size: 0.9rem;
+  color: #e2e8f0;
+  margin-bottom: 14px;
+}
+
+.destaque-pontos strong {
+  color: #f97316;
+}
+
+.btn-fechar {
+  align-self: flex-start;
+  background-color: #334155;
+  color: #ffffff;
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 6px 12px;
+  border-radius: 6px;
+  transition: background-color 0.2s;
+}
+
+.btn-fechar:hover {
+  background-color: #475569;
+}
+
+/* Area de pesquisa e filtros */
+.area-filtros {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.campo-busca {
+  position: relative;
+  max-width: 400px;
+}
+
+.campo-busca input {
+  width: 100%;
+  padding: 10px 36px 10px 14px;
+  background-color: #1e293b;
+  border: 1px solid #334155;
+  border-radius: 8px;
+  color: #ffffff;
+  font-size: 0.9rem;
+  outline: none;
+}
+
+.campo-busca input:focus {
+  border-color: #f97316;
+}
+
+.btn-limpar-busca {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #94a3b8;
+  font-size: 0.8rem;
+}
+
+.btn-limpar-busca:hover {
+  color: #ffffff;
+}
+
+.botoes-posicao {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.btn-posicao {
+  background-color: #1e293b;
+  border: 1px solid #334155;
+  color: #94a3b8;
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 6px 14px;
+  border-radius: 16px;
+  transition: all 0.2s;
+}
+
+.btn-posicao:hover {
+  color: #ffffff;
+  border-color: #64748b;
+}
+
+.btn-posicao.ativo {
+  background-color: #f97316;
+  border-color: #f97316;
+  color: #ffffff;
+}
+
+/* Area da Galeria e Grid */
+.area-galeria {
+  margin-top: 10px;
+}
+
+.galeria-cabecalho {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 16px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #334155;
+}
+
+.galeria-cabecalho h3 {
+  font-size: 1.15rem;
+  color: #ffffff;
+}
+
+.galeria-cabecalho small {
+  color: #94a3b8;
+  font-size: 0.8rem;
+}
+
+.grade-cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+/* Estilo do Card Individual */
+.card-jogador {
+  display: flex;
+  gap: 14px;
+  background-color: #1e293b;
+  border: 1px solid #334155;
+  border-radius: 8px;
+  padding: 14px;
+  cursor: pointer;
+  transition: transform 0.2s, border-color 0.2s;
+}
+
+.card-jogador:hover {
+  transform: translateY(-2px);
+  border-color: #f97316;
+}
+
+.card-jogador.selecionado {
+  border-color: #f97316;
+  background-color: #273549;
+}
+
+.card-foto-wrapper {
+  position: relative;
+  width: 95px;
+  height: 105px;
+  flex-shrink: 0;
+  border-radius: 6px;
+  overflow: hidden;
+  background-color: #0f172a;
+}
+
+.card-foto {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.card-numero {
+  position: absolute;
+  bottom: 4px;
+  left: 4px;
+  background-color: rgba(15, 23, 42, 0.85);
+  color: #f97316;
+  font-size: 0.72rem;
+  font-weight: bold;
+  padding: 1px 5px;
+  border-radius: 3px;
+}
+
+.card-detalhes {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-time {
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: #94a3b8;
+  text-transform: uppercase;
+}
+
+.card-nome {
+  font-size: 1.1rem;
+  color: #ffffff;
+  margin: 2px 0;
+}
+
+.card-posicao {
+  font-size: 0.8rem;
+  color: #cbd5e1;
+}
+
+.card-media {
+  font-size: 0.75rem;
+  color: #f97316;
+  margin-top: 2px;
+}
+
+.card-rodape {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+  padding-top: 8px;
+}
+
+.btn-curtida {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  background-color: #0f172a;
+  border: 1px solid #334155;
+  color: #cbd5e1;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 12px;
+  transition: all 0.2s;
+}
+
+.btn-curtida:hover {
+  border-color: #64748b;
+}
+
+.btn-curtida.ativo {
+  color: #f87171;
+  border-color: rgba(248, 113, 113, 0.4);
+  background-color: rgba(248, 113, 113, 0.1);
+}
+
+.btn-ver-mais {
+  font-size: 0.75rem;
+  color: #94a3b8;
+}
+
+.card-jogador:hover .btn-ver-mais {
+  color: #f97316;
+}
+
+/* Aviso de lista vazia */
+.aviso-vazio {
+  text-align: center;
+  padding: 36px 16px;
+  background-color: #1e293b;
+  border-radius: 8px;
+  color: #94a3b8;
+  font-size: 0.9rem;
+}
+
+.btn-resetar {
+  margin-top: 12px;
+  background-color: #f97316;
+  color: #ffffff;
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 6px 14px;
+  border-radius: 6px;
+}
+
+/* Rodape */
+.footer {
+  background-color: #0b1120;
+  border-top: 1px solid #1e293b;
+  padding: 20px;
+  text-align: center;
+  color: #94a3b8;
+  font-size: 0.8rem;
+  margin-top: auto;
+}
+
+.footer small {
+  display: block;
+  margin-top: 4px;
+  color: #64748b;
+}
+
+/* Responsividade para celular */
+@media (max-width: 720px) {
+  .grade-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .destaque-box {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .destaque-topo {
+    justify-content: center;
+    gap: 8px;
+  }
+
+  .btn-fechar {
+    align-self: center;
+  }
+}
